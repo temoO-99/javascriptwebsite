@@ -1,0 +1,517 @@
+/*start genral style*/
+
+:root {
+  --main-color: darkorange;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  height: 4000px;
+  position: relative;
+}
+
+.main-color {
+  color: darkorange;
+}
+
+.main-back {
+  background-color: darkorange;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+p {
+  color: #999;
+}
+/*end general style*/
+
+/*start setting box*/
+.sit {
+  position: fixed;
+  z-index: 999;
+  min-height: 100vh;
+  background-color: whitesmoke;
+  width: 200px;
+  left: -200px;
+  top: 0;
+  transition: 0.3s;
+}
+
+.sit.open {
+  left: 0;
+}
+
+.sit .toggle {
+  text-align: right;
+  right: -30px;
+  position: absolute;
+  top: 120px;
+  background-color: whitesmoke;
+  color: darkslategray;
+  border-radius: 7px;
+}
+
+.sit .toggle i {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sit .setting {
+  padding: 10px;
+}
+
+.sit .setting .color {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.sit .setting .color h3 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.sit .setting .color ul {
+  list-style: none;
+  padding-left: 15px;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.sit .setting .color ul li {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 3px solid lightgray;
+}
+
+.sit .setting .color ul li.active {
+  opacity: 1;
+  border-color: #fff;
+}
+
+.sit .setting .color ul li:first-child {
+  background-color: darkorange;
+}
+
+.sit .setting .color ul li:nth-child(2) {
+  background-color: darkcyan;
+}
+
+.sit .setting .color ul li:nth-child(3) {
+  background-color: crimson;
+}
+.sit .setting .color ul li:nth-child(4) {
+  background-color: chartreuse;
+}
+
+.sit .setting .landingcontrol {
+  background-color: lightgray;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.sit .setting .landingcontrol h3 {
+  font-size: 14px;
+}
+
+.sit .setting .landingcontrol .butt {
+  margin-left: 20px;
+}
+
+.sit .setting .landingcontrol button {
+  padding: 5px 15px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  background-color: darkcyan;
+  opacity: 0.5;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.sit .setting .landingcontrol button:last-child {
+  margin-left: 10px;
+}
+.sit .setting .landingcontrol button.active {
+  opacity: 1;
+}
+
+/*end setting box*/
+
+/*start landing*/
+.landing {
+  background-image: url(../imgas/03.jpeg);
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+}
+
+.landing .overly {
+  position: absolute;
+  background-color: #00000096;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.landing .header {
+  position: relative;
+  z-index: 2;
+  color: whitesmoke;
+  display: flex;
+  font-weight: bold;
+}
+
+.landing .header .logo {
+  padding: 30px 0;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+.landing .header ul {
+  list-style: none;
+  margin: 0 25px 0 0;
+  padding: 30px 0;
+  text-align: right;
+  width: 100%;
+  cursor: pointer;
+}
+
+.landing .header ul a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.landing .header ul a.active,
+.landing .header ul a:hover {
+  color: darkorange;
+  transition: 0.3s;
+}
+
+.landing .header ul li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.landing .introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  color: whitesmoke;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.landing .introduction p {
+  font-weight: bold;
+  line-height: 2;
+}
+
+/*end landing*/
+
+/*start about*/
+
+.about {
+  padding: 40px 0;
+  margin: 30px 0;
+  overflow: hidden;
+}
+
+.about .lett {
+  width: 60%;
+  float: left;
+}
+
+.about p {
+  line-height: 1.5;
+  color: darkgray;
+  margin-top: 20px;
+}
+
+.about .img {
+  width: 40%;
+  float: left;
+  text-align: center;
+}
+
+/*end about*/
+
+/*start skills*/
+.skill {
+  background-color: #a3a2a2;
+  padding: 40px;
+}
+
+.skill .ski {
+  height: 40px;
+  background-color: white;
+  margin-bottom: 20px;
+  line-height: 40px;
+  border-radius: 7px;
+}
+
+/*
+.skill .ski .first {
+}
+*/
+
+.skill .ski p {
+  width: 13%;
+  text-align: center;
+  float: left;
+  margin: 0;
+}
+
+.skill .ski .last {
+  float: right;
+  width: 85%;
+  height: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  background-color: #e9e9e9;
+  margin-right: 10px;
+  position: relative;
+}
+
+.skill .ski .last span {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  border-radius: 5px;
+  color: white;
+  line-height: 1.2;
+  text-align: right;
+}
+
+/*end skills*/
+
+/*start gallery*/
+
+.gall {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.gall .gall-img img {
+  padding: 4px;
+  border: 1px solid #9e9e9e;
+  background-color: #ececec;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.popup-overly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0, 0.7);
+}
+
+.popup-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  padding: 10px;
+  background-color: whitesmoke;
+  min-width: 300px;
+  max-height: 300px;
+}
+
+.popup-box img {
+  min-width: 280px;
+  max-height: 280px;
+}
+
+.popup-box .close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  color: whitesmoke;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+/*end gallery*/
+
+/*start timeLine*/
+.time {
+  padding: 30px 0;
+  background-color: #eee;
+}
+
+.time .timeline {
+  position: relative;
+  overflow: hidden;
+}
+
+.time .timeline:before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -1px;
+  background-color: var(--main-color);
+  top: 0;
+}
+
+.time .year {
+  text-align: center;
+  width: 50px;
+  color: white;
+  margin: 20px auto;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+}
+
+.time .yearr {
+  text-align: center;
+  width: 50px;
+  color: white;
+  margin: 0 auto;
+  padding: 2px 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  z-index: 2;
+  position: relative;
+  bottom: 30px;
+}
+
+.time .left,
+.time .right {
+  margin-bottom: 40px;
+  width: calc(50% - 25px);
+  position: relative;
+}
+
+.time .left {
+  float: left;
+}
+
+.time .right {
+  float: right;
+}
+
+.time .left:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  right: -35px;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.time .right:before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  background-color: #fff;
+  border: 3px solid var(--main-color);
+  position: absolute;
+  left: -35px;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.time .content {
+  background-color: white;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.time .left .content:before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent #fff;
+  height: 0;
+  width: 0;
+  position: absolute;
+  right: -20px;
+  top: 20px;
+}
+
+.time .right .content:before {
+  content: "";
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent #fff transparent transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: -20px;
+  top: 20px;
+}
+/*end timeLine*/
+
+/* start grid system*/
+@media (min-width: 576px) {
+  /*for phones*/
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  /*for tablts*/
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  /*for desktop*/
+  .container {
+    max-width: 920px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /*for large screen*/
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* end grid system*/
