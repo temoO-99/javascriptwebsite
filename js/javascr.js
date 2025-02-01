@@ -8,47 +8,42 @@
 //};
 
 //website color control
-$(function() {
+$(function () {
   "use strict";
-  $(".sit i").on("click", function() {
+  $(".sit i").on("click", function () {
     $(this).toggleClass("fa-spin");
     $(".sit").toggleClass("open");
   });
 
-  $(".color ul li").click(function() {
-    $(this)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
-
-      
+  $(".color ul li").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
 
     let colorr = $(this).data("color");
 
-    document.documentElement.style.setProperty('--main-color',colorr);
+    document.documentElement.style.setProperty("--main-color", colorr);
 
     $(".main-color").css({
-      color: colorr
+      color: colorr,
     });
 
-    $('before').css({
-      color: colorr
+    $("before").css({
+      color: colorr,
     });
 
     $(".main-back").css({
-      backgroundColor: colorr
+      backgroundColor: colorr,
     });
 
     $(".landing ul a").hover(
-      function() {
+      function () {
         $(this).css({
-          color: colorr
+          color: colorr,
         });
       },
-      function() {
+      function () {
         if (!$(this).is(":first-child")) {
           $(this).css({
-            color: "whitesmoke"
+            color: "whitesmoke",
           });
         }
       }
@@ -58,7 +53,7 @@ $(function() {
 
 // random landing control
 
-$(function() {
+$(function () {
   "use strict";
 
   let landing = document.querySelector(".landing");
@@ -73,11 +68,8 @@ $(function() {
     landing.style.backgroundImage =
       'url("imgas/' + imageArray[randomNum] + '")';
   }, 2000);
-  $(".landingcontrol button").click(function() {
-    $(this)
-      .addClass("active")
-      .siblings()
-      .removeClass("active");
+  $(".landingcontrol button").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
 
     if ($(this).hasClass("yes")) {
       back = setInterval(() => {
@@ -93,7 +85,7 @@ $(function() {
 
 //skiles control
 
-$(function() {
+$(function () {
   "use strick";
 
   //  console.log($(".about").offset().top);
@@ -107,23 +99,23 @@ $(function() {
   console.log(dat2);
   console.log(dat3);
 
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() >= sc) {
       $(".last .fir").animate(
         {
-          width: dat
+          width: dat,
         },
         1000
       );
       $(".last .sec").animate(
         {
-          width: dat2
+          width: dat2,
         },
         1000
       );
       $(".last .thr").animate(
         {
-          width: dat3
+          width: dat3,
         },
         1000
       );
@@ -135,8 +127,8 @@ $(function() {
 
 let ourGallery = document.querySelectorAll(".gall img");
 
-ourGallery.forEach(img => {
-  img.addEventListener("click", e => {
+ourGallery.forEach((img) => {
+  img.addEventListener("click", (e) => {
     //create overly
     let overly = document.createElement("div");
 
@@ -176,7 +168,7 @@ ourGallery.forEach(img => {
   });
 });
 
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
   if (e.target.className == "close") {
     e.target.parentNode.remove();
     document.querySelector(".popup-overly").remove();
